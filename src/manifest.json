@@ -3,12 +3,12 @@
     "author": "igorlogius",
     "description": "display url as qr code for easy sharing between devices with qrcode scanner",
     "manifest_version": 2,
-    "name": "url2qr",
+    "name": "addr2qr",
     "developer": {
 	"name": "igorlogius",
 	"url": "https://github.com/igorlogius"
     },
-    "homepage_url": "https://github.com/igorlogius/url2qr",
+    "homepage_url": "https://github.com/igorlogius/addr2qr",
     "permissions": [
 	    "activeTab"
     ],
