@@ -6,9 +6,15 @@ browser.tabs.query({active: true, currentWindow: true}).then( (tabs) => {
 	const url = tab.url;
 
 	 var qr = new QRious({
+	  background: "white",
+	  backgroundAlpha: 1.0,
           element: document.getElementById('qr'),
-          size: 200,
-	  padding: 10,
+	  foreground: "black",
+	  foregroundAlpha: 1.0,
+	  level: "L",
+	  mime: "image/png",
+	  padding: 0,
+          size: window.innerWidth,
           value: url 
         });
 

@@ -1,5 +1,5 @@
 {
-    "version": "1.0.3",
+    "version": "1.0.4",
     "author": "igorlogius",
     "description": "display url as qr code for easy sharing between devices with qrcode scanner",
     "manifest_version": 2,
