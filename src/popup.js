@@ -13,8 +13,6 @@ browser.tabs.query({active: true, currentWindow: true}).then( (tabs) => {
 	  foregroundAlpha: 1.0,
 	  level: "L",
 	  mime: "image/png",
-	padding: 0,
-	  size: 250,
           value: url 
         });
 
