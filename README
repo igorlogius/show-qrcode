@@ -1,6 +1,6 @@
 
 # Details
-https://addons.mozilla.org/en-US/firefox/addon/addr2qr/
+# https://addons.mozilla.org/en-US/firefox/addon/addr2qr/
 
 # Build
 wget https://github.com/igorlogius/addr2qr/archive/master.zip
@@ -9,3 +9,4 @@ zip "addr2qr-$(grep '"version"' addr2qr/manifest.json  | cut -d'"' -f4).xpi" ./a
 
 # Clean
 rm master.zip && rm ./addr2qr/* && rmdir ./addr2qr/
+
