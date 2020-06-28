@@ -9,7 +9,7 @@ jobs:
     - name: set reponame
       run: echo "::set-env name=REPONAME::$(basename `pwd`)"
     - name: set artversion
-      run: echo "::set-env name=ARTVERSION::$(grep '"version"' manifest.json  | cut -d'"' -f4)"-{{
+      run: echo "::set-env name=ARTVERSION::$(grep '"version"' manifest.json  | cut -d'"' -f4)"-{{ GITHUB_SHA }}
     - name: Build
       run: zip --junk-paths "$(basename `pwd`)-$(grep '"version"' manifest.json  | cut -d'"' -f4).xpi" *.js *.html *.json  *.png
     - name: Create Release
