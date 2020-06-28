@@ -1,0 +1,8 @@
+## Details
+https://addons.mozilla.org/en-US/firefox/addon/${REPO}/
+
+## Build
+wget https://github.com/igorlogius/${REPO}/archive/master.zip
+unzip master.zip
+zip -j "${REPO}-$(grep '"version"' ${NAME}-master/manifest.json  | cut -d'"' -f4).xpi" ./${REPO}-master/*
+
