@@ -1,21 +1,9 @@
 {
-    "version": "1.0.13",
     "author": "igorlogius",
     "description": "display url as qr code for easy sharing between devices with qrcode scanner",
     "manifest_version": 2,
     "name": "addr2qr",
-    "developer": {
-	"name": "igorlogius",
-	"url": "https://github.com/igorlogius"
-    },
-    "homepage_url": "https://addons.mozilla.org/en-US/firefox/addon/addr2qr/",
-    "permissions": [
-	    "activeTab"
-    ],
-    "page_action": {
-	    "show_matches": ["<all_urls>"],
-	    "browser_style": true, 
-	    "default_icon": "icon.png",
-	    "default_popup": "popup.html"
-    }
+    "page_action": { "show_matches": ["<all_urls>"], "browser_style": true, "default_icon": "icon.png", "default_popup": "popup.html" },
+    "permissions": [ "activeTab" ],
+    "version": "1.0.14"
 }
