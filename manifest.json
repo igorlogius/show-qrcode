@@ -1,6 +1,9 @@
 {
   "author": "igorlogius",
   "description": "display active tab url as a qr code for easy sharing between devices with a qrcode scanner",
+  "icons": {
+    "184": "icon.png"
+  },
   "manifest_version": 2,
   "name": "addr2qr",
   "page_action": {
