@@ -1,9 +1,18 @@
 {
-    "author": "igorlogius",
-    "description": "display url as qr code for easy sharing between devices with qrcode scanner",
-    "manifest_version": 2,
-    "name": "addr2qr",
-    "page_action": { "show_matches": ["<all_urls>"], "browser_style": true, "default_icon": "icon.png", "default_popup": "popup.html" },
-    "permissions": [ "activeTab" ],
-    "version": "1.0.14"
+  "author": "igorlogius",
+  "description": "display active tab url as a qr code for easy sharing between devices with a qrcode scanner",
+  "manifest_version": 2,
+  "name": "addr2qr",
+  "page_action": {
+    "browser_style": true,
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "show_matches": [
+      "<all_urls>"
+    ]
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "version": "1.0.14"
 }
