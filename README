@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Details
-# https://addons.mozilla.org/en-US/firefox/addon/addr2qr/
+ID="addr2qr"
+BRANCH="master"
 
 MISSING_REQ=0
 for req in mktemp wget unzip zip grep cut date;do
@@ -15,18 +15,20 @@ ZIPFILE=$(mktemp)
 EXTRDIR=$(mktemp -d)
 
 # download
-wget -q --show-progress 'https://github.com/igorlogius/addr2qr/archive/master.zip' -O $ZIPFILE
+wget -q --show-progress "https://github.com/igorlogius/$ID/archive/$BRANCH.zip" -O $ZIPFILE
 
 # extract without paths and README
 unzip -j $ZIPFILE -d $EXTRDIR -x "*/README"
 
 # re-pack as xpi (zip) without paths and extended file attributes 
-XPI="addr2qr-$(grep '"version"' $EXTRDIR/manifest.json |cut -d'"' -f4)-$(date '+%F_%T').xpi" 
+XPI="$ID-$(grep '"version"' $EXTRDIR/manifest.json |cut -d'"' -f4)-$(date '+%F_%T').xpi" 
 zip -X -j $XPI $EXTRDIR/*
 
 # remove tmp storage
 rm -f $EXTRDIR/* && rmdir $EXTRDIR/
 
-# show conent of xpi
+# show content of xpi
 unzip -l $XPI
+
+echo "Homepage:  https://addons.mozilla.org/en-US/firefox/addon/$ID/"
 
