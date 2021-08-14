@@ -5,7 +5,7 @@
     "184": "icon.png"
   },
   "manifest_version": 2,
-  "name": "addr2qr",
+  "name": "tab url to quick response code",
   "page_action": {
     "browser_style": true,
     "default_icon": "icon.png",
