@@ -1,3 +1,3 @@
 #!/bin/bash
-export AMO='https://addons.mozilla.org/en-US/firefox/addon/tab-url-to-quick-response-code' 
+export AMO='https://addons.mozilla.org/en-US/firefox/addon/taburl-to-qrcode' 
 curl 'https://raw.githubusercontent.com/igorlogius/meta-addon-builder/main/README' | sh
