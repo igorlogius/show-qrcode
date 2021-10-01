@@ -15,17 +15,21 @@
 				padding: 15px;
 				padding-top: 30px;
 			}
-			#qrlink {
+			#qractions {
 				position: absolute;
 				top: 5px;
-				right: 15px;
+				right:15px;
+				width:90%;
+				/*border: 1px solid red;*/
+				text-align:right;
 			}
 		</style>
 	</head>
 	<body>
-		<a id="qrlink" >
-			<button>Save Image</button>
-		</a>
+		<div id="qractions">
+			<a id="qrcopy" title="Copy to clipboard; enable by granting the 'clipboardWrite' permission"><button disabled>Copy</button></a>
+			<a id="qrsave" title="Save as file"><button >Save</button></a>
+		</div>
 		<img id="qrimg" />
 		<script src="qrious.js"></script>
 		<script src="popup.js"></script>
