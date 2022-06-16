@@ -1,11 +1,11 @@
 {
   "author": "igorlogius",
-  "description": "display active tab url as a quick response (qr) code for easy sharing between devices with a qrcode scanner",
+  "description": "display the active tab url as a quick response (qr) code for easy sharing between devices with a qrcode scanner",
   "icons": {
     "184": "icon.png"
   },
   "manifest_version": 2,
-  "name": "taburl-to-qrcode",
+  "name": "TabURL to QRcode",
   "page_action": {
     "browser_style": true,
     "default_icon": "icon.png",
@@ -20,5 +20,5 @@
   "optional_permissions": [
     "clipboardWrite"
   ],
-  "version": "1.3.21"
+  "version": "1.3.22"
 }

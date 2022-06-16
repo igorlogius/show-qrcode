@@ -1,4 +1,4 @@
-
+/* global browser QRious */
 /*
 function dataURItoBlob(dataURI) {
 */
@@ -26,7 +26,6 @@ function dataURItoArrayBuffer(dataURI) {
   // write ArrayBuffer to a blob
   //var blob = new Blob([ab], {type: mimeString});
   //return blob;
-	
 }
 /**/
 
@@ -47,9 +46,9 @@ function dataURItoArrayBuffer(dataURI) {
 			foreground: "black",
 			foregroundAlpha: 1.0,
 			level: "L", // large
-			mime: "image/png", // portable network graphics 
+			mime: "image/png", // portable network graphics
 			size: 940, // max size is size of the window width
-			value: tabs[0].url 
+			value: tabs[0].url
 		});
 
 		const datauri =qr.toDataURL('image/png');
@@ -67,12 +66,12 @@ function dataURItoArrayBuffer(dataURI) {
 				const qrcopy = document.getElementById('qrcopy');
 				qrcopy.querySelector('button').disabled=false;
 				qrcopy.querySelector('button').title="Copy to Clipboard";
-				qrcopy.onclick = async function(evt){
-					qrimg.style.display = 'none'; 
+				qrcopy.onclick = async function(/*evt*/){
+					qrimg.style.display = 'none';
 					const qrArrayBuffer = dataURItoArrayBuffer(datauri);
 					await browser.clipboard.setImageData(qrArrayBuffer, 'png');
 					setTimeout(function(){
-						qrimg.style.display = ''; 
+						qrimg.style.display = 'block';
 					},150);
 				}
 			}
