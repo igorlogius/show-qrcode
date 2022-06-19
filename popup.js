@@ -29,6 +29,12 @@ function dataURItoArrayBuffer(dataURI) {
 }
 /**/
 
+
+    async function getFromStorage(type, id, fallback) {
+		let tmp = await browser.storage.local.get(id);
+		return (typeof tmp[id] === type) ? tmp[id] : fallback;
+	}
+
 (async function () {
 
 
@@ -40,11 +46,17 @@ function dataURItoArrayBuffer(dataURI) {
 		if (                 tabs.length < 1 ) { throw 'tabs length is less than 1'; }
 		if ( typeof tabs[0].url !== 'string' ) { throw 'tab.url is not a string';    }
 
+        const bgcolor = await getFromStorage('string','bgcolor','#ffffff');
+        const bgalpha = await getFromStorage('string','bgalpha',0.0);
+
+        const fgcolor = await getFromStorage('string','fgcolor','#000000');
+        const fgalpha = await getFromStorage('string','fgalpha',1.0);
+
 		const qr = new QRious({
-			background: "white",
-			backgroundAlpha: 0.0, // make background transparent
-			foreground: "black",
-			foregroundAlpha: 1.0,
+			background: bgcolor,
+			backgroundAlpha: bgalpha,
+			foreground: fgcolor,
+			foregroundAlpha: fgalpha,
 			level: "L", // large
 			mime: "image/png", // portable network graphics
 			size: 940, // max size is size of the window width
