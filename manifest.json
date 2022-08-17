@@ -1,28 +1,26 @@
 {
   "author": "igorlogius",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
   "description": "display the active tab url as a quick response (qr) code for easy sharing between devices with a qrcode scanner",
   "icons": {
     "184": "icon.png"
   },
   "manifest_version": 2,
   "name": "TabURL to QRcode",
-  "page_action": {
-    "browser_style": true,
-    "default_icon": "icon.png",
-    "default_popup": "popup.html",
-    "show_matches": [
-      "<all_urls>"
-    ]
+  "browser_action": {
+    "default_popup": "popup.html"
   },
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "menus"
   ],
   "options_ui": {
     "page": "options.html"
   },
-  "optional_permissions": [
-    "clipboardWrite"
-  ],
-  "version": "1.4.22"
+  "version": "1.5.22"
 }

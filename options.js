@@ -28,17 +28,19 @@ function onChange(evt) {
 
 	obj[id] = value;
 
-	console.log(id,value);
+	//console.log(id,value);
 	browser.storage.local.set(obj).catch(console.error);
 
 }
 
-[ "bgcolor","fgcolor", "bgalpha","fgalpha" ].map( (id) => {
+[ "saveMode", "qrPadding", "qrSize", "qrecl", "bgcolor","fgcolor", "bgalpha","fgalpha" ].map( (id) => {
 
 	browser.storage.local.get(id).then( (obj) => {
 
 		let el = document.getElementById(id);
 		let val = obj[id];
+
+        //console.log(id, val);
 
 		if(typeof val !== 'undefined') {
 			if(el.type === 'checkbox') {

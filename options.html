@@ -2,25 +2,52 @@
 <html>
 <head>
   <meta charset="utf-8"></meta>
-  <title></title>
+  <title>TabURL to QRCode - Options</title>
     <style>
-        input {
-        }
+    body {
+        background-color: lightgray;
+        padding:2%;
+    }
+    input {
+        height:2.0em;
+        vertical-align: middle;
+    }
     </style>
 </head>
 <body>
-    <fieldset>
-        <h3>Choose QRCode Color (RGB+A) </h3>
         <fieldset>
-                <legend>Forground</legend>
-                Color <input type="color" id="fgcolor" value="#000000" />
-                Alpha <input type="range" id="fgalpha" value="1.0" min="0.0" step="0.1" max="1.0" />
+                <legend>PNG Save Size</legend>
+                <input type="number" id="qrSize" value="460" min="115" step="1" max="1000" /> pixel
         </fieldset>
-
         <fieldset>
-                <legend>Background</legend>
-                Color <input type="color" id="bgcolor" value="#ffffff" />
-                Alpha <input type="range" id="bgalpha" value="0.0" min="0.0" step="0.1" max="1.0" />
+                <legend>Save Filetype</legend>
+                <select id="saveMode">
+                    <option value="png">Portable Network Graphic (PNG)</option>
+                    <option value="svg">Scalable Vector Graphic (SVG)</option>
+                </select>
+        </fieldset>
+        <fieldset>
+                <legend>Error Correction Level</legend>
+                <select id="qrecl">
+                    <option value="M">Medium (15%)</option>
+                    <option value="L">Low ( 7%)</option>
+                    <option value="Q">Quartile (25%)</option>
+                    <option value="H">High (30%)</option>
+                </select>
+        </fieldset>
+        <fieldset>
+                <legend>Border Padding</legend>
+                <input type="number" id="qrPadding" value="1" min="0" step="1" /> pixel
+        </fieldset>
+        <fieldset>
+                <legend>Colors + Transparancy</legend>
+                <label for="fgcolor"> Foreground: </label>
+                <input type="color" id="fgcolor" value="#000000" />
+                [ transparent ] <input type="range" id="fgalpha" value="255" min="0" step="0" max="255" /> [ opaque ]
+                <hr>
+                <label for="bgcolor"> Background: </label>
+                <input type="color" id="bgcolor" value="#ffffff" />
+                [ transparent] <input type="range" id="bgalpha" value="0" min="0" step="0" max="255" /> [ opaque ]
         </fieldset>
         <script src="options.js"></script>
 </body>

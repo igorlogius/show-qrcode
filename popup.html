@@ -4,34 +4,65 @@
 		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 		<style>
 			body {
-				padding: 3px;
+                max-width:450px;
+				padding: 5px;
 				margin: 0;
-				width: 350px;
-				height: 365px;
 				overflow: hidden;
-				background: gainsboro;
+				background: lightgray;
 			}
+            button {
+                width: 5em;
+                text-align:center;
+            }
 			#qrimg {
-				padding: 15px;
-				padding-top: 30px;
+                text-align:center;
+                max-width: 400px;
 			}
-			#qractions {
-				position: absolute;
-				top: 5px;
-				right:15px;
-				width:90%;
-				/*border: 1px solid red;*/
-				text-align:right;
+            #qrsvg {
+                text-align:center;
+                display:none;
+            }
+			#qractions{
+				text-align:center;
 			}
+            #qrtext {
+                width:100%;
+                height: 4em;
+            }
+            .inner {
+               display: block;
+               margin: auto;
+            }
+            .outer {
+                display:table;
+                width:100%;
+            }
 		</style>
 	</head>
 	<body>
-		<div id="qractions">
-			<a id="qrcopy" title="Copy to clipboard; enable by granting the 'clipboardWrite' permission"><button disabled>Copy</button></a>
-			<a id="qrsave" title="Save as file"><button >Save</button></a>
-		</div>
-		<img id="qrimg" />
-		<script src="qrious.js"></script>
+        <center>
+        <fieldset>
+            <legend>Actions</legend>
+            <div id="qractions">
+                <button id="qrcopy" title="Copy to clipboard">Copy</button>
+                <button id="qroptions" title="Show Options"> &#9881;</button>
+                <button id="qrsave" title="Save qrcode image to disk">Save</button>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Code</legend>
+            <div class="outer">
+                    <img class="inner" id="qrimg" />
+            </div>
+            <div id="qrsvg" />
+
+        </fieldset>
+        <fieldset>
+            <legend>Edit</legend>
+            <textarea id="qrtext"></textarea>
+        </fieldset>
+		<script src="qrcode.js"></script>
 		<script src="popup.js"></script>
+        </center>
 	</body>
 </html>
