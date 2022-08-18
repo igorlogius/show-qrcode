@@ -5,12 +5,13 @@
       "background.js"
     ]
   },
-  "description": "display the active tab url as a quick response (qr) code for easy sharing between devices with a qrcode scanner",
+  "description": "create a qrcode from any tab url, link, image or text",
+  "homepage_url": "https://github.com/igorlogius/show-qrcode",
   "icons": {
     "184": "icon.png"
   },
   "manifest_version": 2,
-  "name": "TabURL to QRcode",
+  "name": "Show QRcode",
   "browser_action": {
     "default_popup": "popup.html"
   },
