@@ -33,7 +33,16 @@ function onChange(evt) {
 
 }
 
-[ "saveMode", "qrPadding", "qrSize", "qrecl", "bgcolor","fgcolor", "bgalpha","fgalpha" ].map( (id) => {
+[
+  "saveMode",
+  "qrPadding",
+  "qrSize",
+  "qrecl",
+  "bgcolor",
+  "fgcolor",
+  "bgalpha",
+  "fgalpha"
+].map( (id) => {
 
 	browser.storage.local.get(id).then( (obj) => {
 

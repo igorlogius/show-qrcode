@@ -32,7 +32,7 @@ async function updateQRCode() {
     }
 
     const qrcode = new QRCode({
-          content:  qrtext.value,
+          content:  qrtype.value + qrtext.value,
           padding: qrPadding,
           width: w-w/4,
           height: w-w/4,
@@ -65,6 +65,7 @@ async function updateQRCode() {
 }
 
 // register listeners
+document.getElementById('qrtype').addEventListener('input', updateQRCode, false);
 document.getElementById('qrtext').addEventListener('input', updateQRCode, false);
 document.getElementById('qrsave').addEventListener('click', async function(){
 
