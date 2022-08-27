@@ -5,6 +5,13 @@
       "background.js"
     ]
   },
+  "commands": {
+    "_execute_browser_action": {
+        "suggested_key": {
+            "default": "Ctrl+Shift+F10"
+        }
+    }
+  },
   "icons": {
     "184": "icon.png"
   },
@@ -21,5 +28,5 @@
   "options_ui": {
     "page": "options.html"
   },
-  "version": "1.6.24"
+  "version": "1.7.24"
 }
