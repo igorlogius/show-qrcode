@@ -127,6 +127,7 @@ async function onLoad() {
     qrtext.value = value;
     updateQRCode();
 
+    qrtext.focus();
 }
 
 document.addEventListener('DOMContentLoaded', onLoad);
