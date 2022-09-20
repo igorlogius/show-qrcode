@@ -98,7 +98,12 @@ document.getElementById('qrcopy').addEventListener('click', function(){
 }, false);
 
 document.getElementById('qroptions').addEventListener('click', function(){
-    window.open('options.html', "_blank", "popup");
+     browser.windows.create({
+           url: ["options.html"],
+           type: "popup",
+           width: 650,
+           height: 460
+       });
 }, false);
 
 async function onLoad() {
