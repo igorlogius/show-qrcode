@@ -1,5 +1,6 @@
 {
   "author": "igorlogius",
+  "homepage_url": "https://github.com/igorlogius/show-qrcode",
   "background": {
     "scripts": [
       "background.js"
@@ -28,5 +29,5 @@
   "options_ui": {
     "page": "options.html"
   },
-  "version": "1.7.26"
+  "version": "1.7.27"
 }

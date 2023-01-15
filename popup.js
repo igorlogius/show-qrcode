@@ -97,13 +97,8 @@ document.getElementById('qrcopy').addEventListener('click', function(){
     qrimg.contentEditable = 'false';
 }, false);
 
-document.getElementById('qroptions').addEventListener('click', function(){
-     browser.windows.create({
-           url: ["options.html"],
-           type: "popup",
-           width: 650,
-           height: 460
-       });
+document.getElementById('qroptions').addEventListener('click', async function(){
+     browser.runtime.openOptionsPage();
 }, false);
 
 async function onLoad() {
