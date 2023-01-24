@@ -2,7 +2,9 @@ Displays the active url (or any selected link or text) as a qrcode for easy shar
 Also allows saving and copying to the clipboard pasting in other programms.
 
 <b>Demo:</b>
-https://user-images.githubusercontent.com/67047467/214374038-4ca857ed-4cef-470d-bafd-877b604e1dfb.mp4
+https://user-images.githubusercontent.com/67047467/214374591-e64aacd6-8a98-47e7-bb1e-e310a8cc0f46.mp4
+
+
 
 <b>Usages:</b>
 <ul>
