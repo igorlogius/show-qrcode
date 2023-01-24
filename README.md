@@ -1,6 +1,9 @@
 Displays the active url (or any selected link or text) as a qrcode for easy sharing between devices with a qrcode scanner like mobile/smart phones and tablets.
 Also allows saving and copying to the clipboard pasting in other programms.
 
+<b>Demo:</b>
+https://user-images.githubusercontent.com/67047467/214374038-4ca857ed-4cef-470d-bafd-877b604e1dfb.mp4
+
 <b>Usages:</b>
 <ul>
     <li>Left click the toolbar button/icon and in the popup just type into the Edit textbox</li>
@@ -25,4 +28,3 @@ Also allows saving and copying to the clipboard pasting in other programms.
         If you have any issues (for example a site it does not work but you think it should) or have improvement suggestions or a feature request please open an issue at the Support Site
     </li>
 </ol>
-
