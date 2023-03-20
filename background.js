@@ -38,18 +38,21 @@ function onCreated() {
 //});
 //
 
-browser.menus.onShown.addListener(async (info, tab) => {
-		browser.menus.update(extname, { visible: true });
+browser.menus.onShown.addListener(async (info /*, tab*/) => {
 	if(info.bookmarkId){
-		tmp = await browser.bookmarks.get(info.bookmarkId);
+		let tmp = await browser.bookmarks.get(info.bookmarkId);
 		if(tmp.length === 1){
 			tmp = tmp[0];
 			if(tmp.url){
-				return;
+				browser.menus.update(extname, { visible: true });
+			}else{
+				browser.menus.update(extname, { visible: false });
 			}
+		}else{
+			browser.menus.update(extname, { visible: false });
 		}
-		browser.menus.update(extname, { visible: false });
-		// Note: Not waiting for returned promise.
+	}else{
+		browser.menus.update(extname, { visible: true });
 	}
 	browser.menus.refresh();
 });
