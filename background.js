@@ -13,11 +13,20 @@ types.set("tel","Phone Number ");
 types.set("geo","Geo Location (float,float)");
 */
 
+function onCreated() {
+  if (browser.runtime.lastError) {
+    console.error("error creating item:", browser.runtime.lastError);
+  } else {
+    console.debug("item created successfully");
+  }
+}
+
+
 //types.forEach(function(value, key) {
     browser.menus.create({
-        //id: key
-         title: extname
-        ,contexts: ["selection","link","image" ]
+         id: extname
+        ,title: extname
+        ,contexts: ["bookmark", "selection","link","image" ]
         ,onclick: function(clickData/*,tab*/) {
             clickDataStore = clickData;
             /*if(clickData.menuItemId !== "text"){
@@ -25,8 +34,26 @@ types.set("geo","Geo Location (float,float)");
             }*/
             browser.browserAction.openPopup();
         }
-    });
+    }, onCreated);
 //});
+//
+
+browser.menus.onShown.addListener(async (info, tab) => {
+		browser.menus.update(extname, { visible: true });
+	if(info.bookmarkId){
+		tmp = await browser.bookmarks.get(info.bookmarkId);
+		if(tmp.length === 1){
+			tmp = tmp[0];
+			if(tmp.url){
+				return;
+			}
+		}
+		browser.menus.update(extname, { visible: false });
+		// Note: Not waiting for returned promise.
+	}
+	browser.menus.refresh();
+});
+
 
 async function onMessage(/*data , sender*/) {
     const tmp = clickDataStore;

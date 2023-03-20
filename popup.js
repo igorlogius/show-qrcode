@@ -106,6 +106,9 @@ async function onLoad() {
     const m = await browser.runtime.sendMessage({});
     let value = '';
     if ( typeof m === 'object') {
+	if(m.bookmarkId){
+		value = (await browser.bookmarks.get(m.bookmarkId))[0].url;
+	}else{
         //  1. text, 2. linkUrl (a) , 3. srcUrl (img)
         for(let b of ['selectionText', 'linkUrl', 'srcUrl' ]){
             if(typeof m[b] === 'string' && m[b].trim() !== ''){
@@ -116,6 +119,7 @@ async function onLoad() {
                 break;
             }
         }
+	}
     }
 
     if(value === ''){
