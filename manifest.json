@@ -19,6 +19,7 @@
   "manifest_version": 2,
   "name": "Show QRcode",
   "browser_action": {
+    "default_area": "navbar",
     "default_popup": "popup.html"
   },
   "permissions": [
@@ -30,5 +31,5 @@
   "options_ui": {
     "page": "options.html"
   },
-  "version": "1.8.28"
+  "version": "1.8.29"
 }
