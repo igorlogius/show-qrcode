@@ -1,14 +1,21 @@
-Displays the active url (or any selected link or text) as a qrcode for easy sharing between devices with a qrcode scanner like mobile/smart phones and tablets.
-Also allows saving and copying to the clipboard pasting in other programms.
+Displays the active url (or any selected link or text) as a qrcode for easy
+sharing between devices with a qrcode scanner like mobile/smart phones and
+tablets. Also allows saving and copying to the clipboard pasting in other
+programms.
 
-<b>Demo:</b>
-
-https://user-images.githubusercontent.com/67047467/214374756-6860fff7-f7ed-4f25-be6c-950beba47e22.mp4
+<b>Note: QRCode for Bookmark Items</b>
+To allow the addon to create QRCodes from Bookmark Elements (in the sidebar, the bookmark bar or elsewhere, enable the optional Permission in the addon settings. Afterwards, when right clicking on an item, the addional context entry will be available.
 
 <b>Usages:</b>
 <ul>
-    <li>Left click the toolbar button/icon and in the popup just type into the Edit textbox</li>
-    <li>Right click on any selected text, link or image and then click on the "Show QRCode" content menu item</li>
+  <li>
+    Left click the toolbar button/icon and in the popup just type into the Edit
+    textbox
+  </li>
+  <li>
+    Right click on any selected text, link or image and then click on the "Show
+    QRCode" content menu item
+  </li>
 </ul>
 
 <b>Notes:</b>
@@ -29,3 +36,4 @@ https://user-images.githubusercontent.com/67047467/214374756-6860fff7-f7ed-4f25-
         If you have any issues (for example a site it does not work but you think it should) or have improvement suggestions or a feature request please open an issue at the Support Site
     </li>
 </ol>
+

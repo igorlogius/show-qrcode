@@ -1,54 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8"></meta>
-  <title>Show QRCode: Options</title>
+  <head>
+    <title>Show QRCode: Options</title>
     <style>
-    body {
+      body {
         background-color: lightgray;
-        padding:2%;
-    }
-    input {
-        height:2.0em;
+        padding: 2%;
+      }
+      input {
+        height: 2em;
         vertical-align: middle;
-    }
+      }
     </style>
-</head>
-<body>
-        <fieldset>
-                <legend>PNG Save Size</legend>
-                <input type="number" id="qrSize" value="460" min="115" step="1" max="1000" />
-        </fieldset>
-        <fieldset>
-                <legend>Save Filetype</legend>
-                <select id="saveMode">
-                    <option value="png">Portable Network Graphic (PNG)</option>
-                    <option value="svg">Scalable Vector Graphic (SVG)</option>
-                </select>
-        </fieldset>
-        <fieldset>
-                <legend>Error Correction Level</legend>
-                <select id="qrecl">
-                    <option value="M">Medium (15%)</option>
-                    <option value="L">Low ( 7%)</option>
-                    <option value="Q">Quartile (25%)</option>
-                    <option value="H">High (30%)</option>
-                </select>
-        </fieldset>
-        <fieldset>
-                <legend>Border Padding</legend>
-                <input type="number" id="qrPadding" value="1" min="0" step="1" />
-        </fieldset>
-        <fieldset>
-                <legend>Colors + Transparancy</legend>
-                <label for="fgcolor"> Foreground: </label>
-                <input type="color" id="fgcolor" value="#000000" />
-                [ transparent ] <input type="range" id="fgalpha" value="255" min="0" step="0" max="255" /> [ opaque ]
-                <hr>
-                <label for="bgcolor"> Background: </label>
-                <input type="color" id="bgcolor" value="#ffffff" />
-                [ transparent] <input type="range" id="bgalpha" value="0" min="0" step="0" max="255" /> [ opaque ]
-        </fieldset>
-        <script src="options.js"></script>
-</body>
+  </head>
+  <body>
+    <fieldset>
+      <legend>PNG Save Size</legend>
+      <input
+        type="number"
+        id="qrSize"
+        value="460"
+        min="115"
+        step="1"
+        max="1000"
+      />
+    </fieldset>
+    <fieldset>
+      <legend>Save Filetype</legend>
+      <select id="saveMode">
+        <option value="png">Portable Network Graphic (PNG)</option>
+        <option value="svg">Scalable Vector Graphic (SVG)</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>Error Correction Level</legend>
+      <select id="qrecl">
+        <option value="M">Medium (15%)</option>
+        <option value="L">Low ( 7%)</option>
+        <option value="Q">Quartile (25%)</option>
+        <option value="H">High (30%)</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>Border Padding</legend>
+      <input type="number" id="qrPadding" value="1" min="0" step="1" />
+    </fieldset>
+    <fieldset>
+      <legend>Colors + Transparancy</legend>
+      <label for="fgcolor"> Foreground: </label>
+      <input type="color" id="fgcolor" value="#000000" />
+      [ transparent ]
+      <input type="range" id="fgalpha" value="255" min="0" step="0" max="255" />
+      [ opaque ]
+      <hr />
+      <label for="bgcolor"> Background: </label>
+      <input type="color" id="bgcolor" value="#ffffff" />
+      [ transparent]
+      <input type="range" id="bgalpha" value="0" min="0" step="0" max="255" /> [
+      opaque ]
+    </fieldset>
+    <script src="options.js"></script>
+  </body>
 </html>

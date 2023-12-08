@@ -2,15 +2,13 @@
   "author": "igorlogius",
   "homepage_url": "https://github.com/igorlogius/show-qrcode",
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "scripts": ["background.js"]
   },
   "commands": {
     "_execute_browser_action": {
-        "suggested_key": {
-            "default": "Ctrl+Shift+F10"
-        }
+      "suggested_key": {
+        "default": "Ctrl+Shift+F10"
+      }
     }
   },
   "icons": {
@@ -22,14 +20,10 @@
     "default_area": "navbar",
     "default_popup": "popup.html"
   },
-  "permissions": [
-    "bookmarks",
-    "activeTab",
-    "storage",
-    "menus"
-  ],
+  "permissions": ["activeTab", "storage", "menus"],
+  "optional_permissions": ["bookmarks"],
   "options_ui": {
     "page": "options.html"
   },
-  "version": "1.8.29"
+  "version": "1.8.30"
 }

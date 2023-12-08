@@ -21,48 +21,48 @@ function onCreated() {
   }
 }
 
-
 //types.forEach(function(value, key) {
-    browser.menus.create({
-         id: extname
-        ,title: extname
-        ,contexts: ["bookmark", "selection","link","image" ]
-        ,onclick: function(clickData/*,tab*/) {
-            clickDataStore = clickData;
-            /*if(clickData.menuItemId !== "text"){
+browser.menus.create(
+  {
+    id: extname,
+    title: extname,
+    contexts: ["bookmark", "selection", "link", "image"],
+    onclick: function (clickData /*,tab*/) {
+      clickDataStore = clickData;
+      /*if(clickData.menuItemId !== "text"){
                 clickDataStore["type"] = key;
             }*/
-            browser.browserAction.openPopup();
-        }
-    }, onCreated);
+      browser.browserAction.openPopup();
+    },
+  },
+  onCreated
+);
 //});
 //
 
 browser.menus.onShown.addListener(async (info /*, tab*/) => {
-	if(info.bookmarkId){
-		let tmp = await browser.bookmarks.get(info.bookmarkId);
-		if(tmp.length === 1){
-			tmp = tmp[0];
-			if(tmp.url){
-				browser.menus.update(extname, { visible: true });
-			}else{
-				browser.menus.update(extname, { visible: false });
-			}
-		}else{
-			browser.menus.update(extname, { visible: false });
-		}
-	}else{
-		browser.menus.update(extname, { visible: true });
-	}
-	browser.menus.refresh();
+  if (info.bookmarkId) {
+    let tmp = await browser.bookmarks.get(info.bookmarkId);
+    if (tmp.length === 1) {
+      tmp = tmp[0];
+      if (tmp.url) {
+        browser.menus.update(extname, { visible: true });
+      } else {
+        browser.menus.update(extname, { visible: false });
+      }
+    } else {
+      browser.menus.update(extname, { visible: false });
+    }
+  } else {
+    browser.menus.update(extname, { visible: true });
+  }
+  browser.menus.refresh();
 });
 
-
 async function onMessage(/*data , sender*/) {
-    const tmp = clickDataStore;
-    clickDataStore = undefined;
-    return  Promise.resolve(tmp);
+  const tmp = clickDataStore;
+  clickDataStore = undefined;
+  return Promise.resolve(tmp);
 }
 
 browser.runtime.onMessage.addListener(onMessage);
-

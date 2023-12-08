@@ -1,83 +1,85 @@
 <!DOCTYPE html>
 <head>
-	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-	<style>
-	body {
-		padding: 5px;
-		margin: 0;
-		overflow: hidden;
-		background: lightgray;
-	}
-	button {
-		width: 5em;
-		text-align:center;
-		margin:0;
-		padding:0;
-	}
-	#qrtext {
-		width:100%;
-		margin:0;
-		padding:0;
-	}
-	#qrimg {
-		text-align:center;
-		max-width: 350px;
-		margin:0;
-		padding:0;
-	}
-	#qrtype {
-		width: 100%;
-		margin:0;
-		padding:0;
-		text-align:center;
-	}
-	#qrsvg {
-		text-align:center;
-		display:none;
-		margin:0;
-		padding:0;
-	}
-	#qractions{
-		text-align:center;
-		margin:0;
-		padding:0;
-	}
-	#qrtext {
-		width:100%;
-		height: 4em;
-		margin:0;
-		padding:0;
-	}
-	</style>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <style>
+    body {
+      padding: 5px;
+      margin: 0;
+      overflow: hidden;
+      background: lightgray;
+    }
+    button {
+      width: 5em;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    #qrtext {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #qrimg {
+      text-align: center;
+      max-width: 350px;
+      margin: 0;
+      padding: 0;
+    }
+    #qrtype {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    #qrsvg {
+      text-align: center;
+      display: none;
+      margin: 0;
+      padding: 0;
+    }
+    #qractions {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    #qrtext {
+      width: 100%;
+      height: 4em;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
-	<center>
-		<fieldset>
-			<div id="qractions">
-				<button id="qrcopy" title="Copy to clipboard">Copy</button>
-				<button id="qroptions" title="Show Options"> &#9881;</button>
-				<button id="qrsave" title="Save qrcode image to disk">Save</button>
-			</div>
-		</fieldset>
-		<fieldset>
-			<div class="outer">
-				<img class="inner" id="qrimg" />
-			</div>
-			<div id="qrsvg" />
-		</fieldset>
-		<fieldset>
-			<select id="qrtype">
-				<option value="">URL or Text</option>
-				<option value="mailto:">E-Mail</option>
-				<option value="tel:">Phone Number</option>
-				<option value="geo:">Geo Location [Format: "{float},{float}"]</option>
-				<option value="WIFI:">WiFi [Format: "T:WPA;S:{SSID};P:{PASSWD};H:{true|false}"]</option>
-			</select>
-		</fieldset>
-		<fieldset>
-			<textarea id="qrtext"></textarea>
-		</fieldset>
-		<script src="qrcode.js"></script>
-		<script src="popup.js"></script>
-	</center>
+  <center>
+    <fieldset>
+      <div id="qractions">
+        <button id="qrcopy" title="Copy to clipboard">Copy</button>
+        <button id="qroptions" title="Show Options">&#9881;</button>
+        <button id="qrsave" title="Save qrcode image to disk">Save</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="outer">
+        <img class="inner" id="qrimg" />
+      </div>
+      <div id="qrsvg" />
+    </fieldset>
+    <fieldset>
+      <select id="qrtype">
+        <option value="">URL or Text</option>
+        <option value="mailto:">E-Mail</option>
+        <option value="tel:">Phone Number</option>
+        <option value="geo:">Geo Location [Format: "{float},{float}"]</option>
+        <option value="WIFI:">
+          WiFi [Format: "T:WPA;S:{SSID};P:{PASSWD};H:{true|false}"]
+        </option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <textarea id="qrtext"></textarea>
+    </fieldset>
+    <script src="qrcode.js"></script>
+    <script src="popup.js"></script>
+  </center>
 </body>
