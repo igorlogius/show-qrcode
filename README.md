@@ -7,6 +7,7 @@ programms.
 To allow the addon to create QRCodes from Bookmark Elements (in the sidebar, the bookmark bar or elsewhere, enable the optional Permission in the addon settings. Afterwards, when right clicking on an item, the addional context entry will be available.
 
 <b>Short Demo Video:</b>
+
 https://github.com/igorlogius/show-qrcode/assets/67047467/fa559387-190d-49a7-af6d-e46b13311894
 
 <b>Usages:</b>
