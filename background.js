@@ -13,30 +13,19 @@ types.set("tel","Phone Number ");
 types.set("geo","Geo Location (float,float)");
 */
 
-function onCreated() {
-  if (browser.runtime.lastError) {
-    console.error("error creating item:", browser.runtime.lastError);
-  } else {
-    console.debug("item created successfully");
-  }
-}
-
 //types.forEach(function(value, key) {
-browser.menus.create(
-  {
-    id: extname,
-    title: extname,
-    contexts: ["bookmark", "selection", "link", "image"],
-    onclick: function (clickData /*,tab*/) {
-      clickDataStore = clickData;
-      /*if(clickData.menuItemId !== "text"){
+browser.menus.create({
+  id: extname,
+  title: extname,
+  contexts: ["bookmark", "selection", "link", "image"],
+  onclick: function (clickData /*,tab*/) {
+    clickDataStore = clickData;
+    /*if(clickData.menuItemId !== "text"){
                 clickDataStore["type"] = key;
             }*/
-      browser.browserAction.openPopup();
-    },
+    browser.browserAction.openPopup();
   },
-  onCreated
-);
+});
 //});
 //
 
