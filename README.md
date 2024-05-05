@@ -3,6 +3,8 @@ sharing between devices with a qrcode scanner like mobile/smart phones and
 tablets. Also allows saving and copying to the clipboard pasting in other
 programms.
 
+### [Click here to report a bug, make a suggestion or ask a question](https://github.com/igorlogius/igorlogius/issues/new/choose)
+
 <b>Note: QRCode for Bookmark Items</b>
 To allow the addon to create QRCodes from Bookmark Elements (in the sidebar, the
 bookmark bar or elsewhere, enable the optional Permission in the addon settings.
