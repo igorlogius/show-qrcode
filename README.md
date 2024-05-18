@@ -3,6 +3,8 @@ sharing between devices with a qrcode scanner like mobile/smart phones and
 tablets. Also allows saving and copying to the clipboard pasting in other
 programms.
 
+[![](https://raw.githubusercontent.com/igorlogius/igorlogius/main/geFxAddon.png)](https://addons.mozilla.org/firefox/addon/show-qrcode/)
+
 ### [Click here to report a bug, make a suggestion or ask a question](https://github.com/igorlogius/igorlogius/issues/new/choose)
 
 <b>Note: QRCode for Bookmark Items</b>
