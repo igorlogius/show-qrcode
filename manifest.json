@@ -1,6 +1,6 @@
 {
   "author": "igorlogius",
-  "homepage_url": "https://github.com/igorlogius",
+  "homepage_url": "https://github.com/igorlogius/show-qrcode",
   "background": {
     "scripts": ["background.js"]
   },
@@ -13,7 +13,7 @@
   },
   "description": "Displays the active url (or any selected link or text) as a qrcode for easy sharing between devices with a qrcode scanner like mobile/smart phones and tablets. Also allows saving and copying to the clipboard for pasting in other programms",
   "icons": {
-    "256": "icon.png"
+    "512": "icon.png"
   },
   "manifest_version": 2,
   "name": "Show QRcode",
@@ -26,5 +26,5 @@
   "options_ui": {
     "page": "options.html"
   },
-  "version": "1.8.32"
+  "version": "1.8.33"
 }
