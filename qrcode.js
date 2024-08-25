@@ -130,7 +130,7 @@ QRCodeModel.prototype = {
       this.dataCache = QRCodeModel.createData(
         this.typeNumber,
         this.errorCorrectLevel,
-        this.dataList
+        this.dataList,
       );
     }
     this.mapData(this.dataCache, maskPattern);
@@ -314,7 +314,7 @@ QRCodeModel.createData = function (typeNumber, errorCorrectLevel, dataList) {
         buffer.getLengthInBits() +
         ">" +
         totalDataCount * 8 +
-        ")"
+        ")",
     );
   }
   if (buffer.getLengthInBits() + 4 <= totalDataCount * 8) {
@@ -695,7 +695,7 @@ QRPolynomial.prototype = {
     for (var i = 0; i < this.getLength(); i++) {
       for (var j = 0; j < e.getLength(); j++) {
         num[i + j] ^= QRMath.gexp(
-          QRMath.glog(this.get(i)) + QRMath.glog(e.get(j))
+          QRMath.glog(this.get(i)) + QRMath.glog(e.get(j)),
         );
       }
     }
@@ -889,7 +889,7 @@ QRRSBlock.getRSBlocks = function (typeNumber, errorCorrectLevel) {
       "bad rs block @ typeNumber:" +
         typeNumber +
         "/errorCorrectLevel:" +
-        errorCorrectLevel
+        errorCorrectLevel,
     );
   }
   var length = rsBlock.length / 3;
@@ -1035,7 +1035,7 @@ function QRCode(options) {
 
   if (!(this.options.width > 0) || !(this.options.height > 0)) {
     throw new Error(
-      "Expected 'width' or 'height' value to be higher than zero!"
+      "Expected 'width' or 'height' value to be higher than zero!",
     );
   }
 
@@ -1069,7 +1069,7 @@ function QRCode(options) {
       var table = QRCodeLimitLength[i];
       if (!table) {
         throw new Error(
-          "Content too long: expected " + limit + " but got " + length
+          "Content too long: expected " + limit + " but got " + length,
         );
       }
 

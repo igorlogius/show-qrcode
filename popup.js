@@ -23,7 +23,7 @@ async function updateQRCode() {
     body.offsetWidth,
     html.clientWidth,
     html.scrollWidth,
-    html.offsetWidth
+    html.offsetWidth,
   );
 
   fgcolor = fgcolor + fgalpha.toString(16);
@@ -66,7 +66,7 @@ async function updateQRCode() {
     svgImage.remove();
   };
   svgImage.src = URL.createObjectURL(
-    new Blob([svg], { type: "image/svg+xml" })
+    new Blob([svg], { type: "image/svg+xml" }),
   );
 }
 
@@ -91,14 +91,14 @@ document.getElementById("qrsave").addEventListener(
     } else if (mode === "svg") {
       const qrsvg = document.getElementById("qrsvg");
       a.href = URL.createObjectURL(
-        new Blob([qrsvg.innerHTML], { type: "image/svg+xml" })
+        new Blob([qrsvg.innerHTML], { type: "image/svg+xml" }),
       );
       a.click();
       URL.revokeObjectURL(a.href);
     }
     a.remove();
   },
-  false
+  false,
 );
 document.getElementById("qrcopy").addEventListener(
   "click",
@@ -113,7 +113,7 @@ document.getElementById("qrcopy").addEventListener(
     document.execCommand("copy");
     qrimg.contentEditable = "false";
   },
-  false
+  false,
 );
 
 document.getElementById("qroptions").addEventListener(
@@ -121,7 +121,7 @@ document.getElementById("qroptions").addEventListener(
   async function () {
     browser.runtime.openOptionsPage();
   },
-  false
+  false,
 );
 
 async function onLoad() {

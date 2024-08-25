@@ -18,13 +18,12 @@
   "manifest_version": 2,
   "name": "Show QRcode",
   "browser_action": {
-    "default_area": "navbar",
-    "default_popup": "popup.html"
+    "default_area": "navbar"
   },
   "permissions": ["activeTab", "storage", "menus"],
   "optional_permissions": ["bookmarks"],
   "options_ui": {
     "page": "options.html"
   },
-  "version": "1.8.33"
+  "version": "1.8.34"
 }

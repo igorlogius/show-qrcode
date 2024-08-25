@@ -20,14 +20,21 @@ browser.menus.create({
   contexts: ["bookmark", "selection", "link", "image"],
   onclick: function (clickData /*,tab*/) {
     clickDataStore = clickData;
-    /*if(clickData.menuItemId !== "text"){
-                clickDataStore["type"] = key;
-            }*/
-    browser.browserAction.openPopup();
+
+    if (clickData.button === 1 || clickData.modifiers.includes("Ctrl")) {
+      browser.windows.create({
+        type: "popup",
+        url: ["popup.html"],
+        width: 500,
+        height: 550,
+      });
+    } else {
+      browser.browserAction.setPopup({ popup: "popup.html" });
+      browser.browserAction.openPopup();
+      browser.browserAction.setPopup({ popup: "" });
+    }
   },
 });
-//});
-//
 
 browser.menus.onShown.addListener(async (info /*, tab*/) => {
   if (info.bookmarkId) {
@@ -55,3 +62,18 @@ async function onMessage(/*data , sender*/) {
 }
 
 browser.runtime.onMessage.addListener(onMessage);
+
+browser.browserAction.onClicked.addListener((tab, info) => {
+  if (info.button === 1 || info.modifiers.includes("Ctrl")) {
+    browser.windows.create({
+      type: "popup",
+      url: ["popup.html"],
+      width: 500,
+      height: 550,
+    });
+  } else {
+    browser.browserAction.setPopup({ popup: "popup.html" });
+    browser.browserAction.openPopup();
+    browser.browserAction.setPopup({ popup: "" });
+  }
+});
