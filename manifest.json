@@ -13,7 +13,7 @@
   },
   "description": "Displays the active url (or any selected link or text) as a qrcode for easy sharing between devices with a qrcode scanner like mobile/smart phones and tablets. Also allows saving and copying to the clipboard for pasting in other programms",
   "icons": {
-    "512": "icon.png"
+    "15": "icon.png"
   },
   "manifest_version": 2,
   "name": "Show QRcode",
@@ -25,5 +25,5 @@
   "options_ui": {
     "page": "options.html"
   },
-  "version": "1.8.34"
+  "version": "1.8.35"
 }
